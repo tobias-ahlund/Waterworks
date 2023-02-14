@@ -30,3 +30,5 @@ fetch(
       line2.append(stationCircle);
     });
   });
+
+console.log("funka");
