@@ -16,4 +16,17 @@ fetch(
 
     console.log(firstHalf);
     console.log(secondHalf);
+
+    //loop
+    firstHalf.forEach((station) => {
+      const stationCircle = document.createElement("div");
+      stationCircle.classList.add("stationCircle");
+      line1.append(stationCircle);
+    });
+
+    secondHalf.forEach((secondStation) => {
+      const stationCircle = document.createElement("div");
+      stationCircle.classList.add("stationCircle");
+      line2.append(stationCircle);
+    });
   });
