@@ -23,6 +23,11 @@ h2 {
   height: 100vh;
   width: 100vw;
 }
+#blåhaj {
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
+}
 #nav {
   position: -webkit-sticky;
   position: sticky;
@@ -30,21 +35,30 @@ h2 {
 }
 #nav-container {
   position: absolute;
-  /* display: flex;
-  flex-direction: column; */
   right: 0vw;
-  top: 80vh;
+  top: 65vh;
   font-size: larger;
   z-index: 3;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .nav-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-width: 7vw;
+}
+.nav-item > a:hover {
+  color: white !important;
+  font-weight: bold;
+  transition: 100ms ease;
 }
 .nav-item > a {
-  color: white;
+  color: rgb(179, 179, 179);
   text-decoration: none;
   font-size: larger;
-  padding-right: 1.5vw;
+  transition: 400ms ease;
 }
 .nav-item > div {
   background-color: green;
@@ -52,15 +66,10 @@ h2 {
   width: 105%;
   border-radius: 5px;
 }
-.nav-item-active > a {
-  color: white;
-  text-decoration: none;
-  font-size: larger;
-  padding-right: 5vw;
-}
-.nav-item-active > div {
-  background-color: green;
-  height: 2.5px;
-  width: 105%;
-  border-radius: 5px;
+.active {
+  padding-right: 1vw;
+  font-size: xx-large !important;
+  color: white !important;
+  font-weight: bold;
+  transition: 300ms ease-out;
 }

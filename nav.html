@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="nav.css" />
+    <script src="nav.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <div id="nav">
       <div id="nav-container">
-        <div class="nav-item-active">
+        <div class="nav-item">
           <a href="#header">header</a>
           <div></div>
         </div>
@@ -20,16 +21,16 @@
         </div>
       </div>
     </div>
-    <div id="header">
-      <h2>content</h2>
+    <section id="header" class="page" data-index="0">
+      <h2>header</h2>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni neque
         consequatur quibusdam est harum nam tempore temporibus atque dolor,
         officiis magnam, reprehenderit eaque quae sint quia odio blanditiis
         veritatis voluptatum!
       </p>
-    </div>
-    <div id="content">
+    </section>
+    <section id="content" class="page" data-index="1">
       <h2>content</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel unde
@@ -37,6 +38,6 @@
         Provident ipsam adipisci quia minima reprehenderit qui vero at natus
         quasi?
       </p>
-    </div>
+    </section>
   </body>
 </html>
