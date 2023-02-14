@@ -1,0 +1,19 @@
+/* Water tap with drop animation. */
+.water-tap {
+    position: relative;
+}
+
+.water-drop {
+    width: 80px;
+    position: absolute;
+    height: 80px;
+    top: 270px;
+    left: 300px;
+    animation: test 800ms ease-out infinite;
+}
+
+@keyframes test {
+    25% {transform: scale(1, 1);}
+    50% {top: 500px; transform: scale(2, 0.1);}
+    100% {top: 500px; transform: scale(2, 0.01);}
+} 
