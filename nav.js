@@ -1,5 +1,5 @@
 const navLinks = document.querySelectorAll('.nav-item a');
-const pages = document.querySelectorAll('.pages');
+const pages = document.querySelectorAll('.page');
 
 const observer = new IntersectionObserver(
   (entries) => {
