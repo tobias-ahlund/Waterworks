@@ -39,6 +39,9 @@ body {
     background-color: #2E8B57;
     color: white;
 }
+.about-us-button:hover {
+    background-color: #2a734a;
+}
 
 .hide {
     display: none;
