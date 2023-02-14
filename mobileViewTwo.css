@@ -23,35 +23,35 @@ body {
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-  background-color: rebeccapurple;
 }
 
 .line-1 {
-  background-color: black;
   height: 100%;
-  width: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 200px;
+}
+
+.wave {
+  width: 1px;
+  background-color: black;
 }
 
 .line-2 {
   margin-top: 120px;
-  background-color: black;
   height: 100%;
-  width: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 130px;
+  gap: 250px;
 }
 
 .stationCircle {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border-radius: 100%;
-  background-color: red;
+  background-color: rgb(28, 127, 0);
 }
