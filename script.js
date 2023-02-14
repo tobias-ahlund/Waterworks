@@ -1,13 +1,13 @@
 // Add images
 let waterTap = new Image();
 waterTap.classList.add("water-tap");
-waterTap.src="water-tap.svg";
+waterTap.src="images/water-tap.svg";
 waterTap.alt="water tap";
 
 let waterDrop = new Image();
 waterDrop.classList.add("water-drop");
 waterDrop.src="images/water-drop.svg";
-waterDrop.alt="images/water drop";
+waterDrop.alt="water drop";
 
 document.body.append(waterTap);
 document.body.append(waterDrop);
