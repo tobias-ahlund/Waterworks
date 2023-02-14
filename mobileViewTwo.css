@@ -1,20 +1,57 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
+  background-color: rgb(196, 255, 255);
+  height: 100%;
+  width: 100%;
 }
 
 .lakes-section {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
-.line {
-    background-color: black;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  background-color: rebeccapurple;
+}
+
+.line-1 {
+  background-color: black;
+  height: 100%;
+  width: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.line-2 {
+  background-color: black;
+  height: 100%;
+  width: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.stationCircle {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: red;
 }
