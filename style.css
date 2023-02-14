@@ -1,34 +1,123 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'sans-serif';
+  --ltblue: #d7f2fa;
+  --ltgreen: #9fe2bf;
+  --darkgreen: #2e8b57;
+  --turquoise: #20b2aa;
+  --black: #000000;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 16px;
-    background-color: #b0d6e1;
-    color: black;
+  font-size: 16px;
+  background-color: var(--ltblue);
+  color: var(--black);
+  
+}
+section {
+  height: 100vh;
+  width: 100vw;
+}
+.bubbleContainer {
+  padding-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.bubble {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #B0D6E1;
+}
+
+.bubbleContainer :nth-child(2) {
+  background-color: #B0D6E1;
+  margin-left: 60px;
+  scale: 0.6;
+}
+
+#intoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#intoContainer p {
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  text-align: center;
+}
+#intoContainer > * {
+  padding: 1rem 1rem 0rem;
+  font-size: 20px;
+  width: fit-content;
+}
+#intoContainer > h1 {
+  font-size: 30px;
+  text-align: center;
+}
+#btnContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+#btnContainer > button {
+  font-size: 20px;
+  width: 37%;
+  padding: 10px 0px 10px;
+  background-color: var(--turquoise);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 500;
+}
+#btnContainer :nth-child(2) {
+  background-color: var(--darkgreen) !important;
+}
+
+#animationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.placeholder-svg {
+  display: block;
 }
 
 /* Water tap with drop animation. */
 .water-tap {
-    position: relative;
+  position: relative;
 }
 
 .water-drop {
-    width: 80px;
-    position: absolute;
-    height: 80px;
-    top: 270px;
-    left: 300px;
-    animation: test 800ms ease-out infinite;
+  width: 80px;
+  position: absolute;
+  height: 80px;
+  top: 270px;
+  left: 300px;
+  animation: test 800ms ease-out infinite;
 }
 
 @keyframes test {
-    25% {transform: scale(1, 1);}
-    50% {top: 500px; transform: scale(2, 0.1);}
-    100% {top: 500px; transform: scale(2, 0.01);}
-} 
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    top: 500px;
+    transform: scale(2, 0.1);
+  }
+  100% {
+    top: 500px;
+    transform: scale(2, 0.01);
+  }
+}
