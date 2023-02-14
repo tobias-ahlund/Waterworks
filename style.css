@@ -1,3 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    background-color: #b0d6e1;
+    color: black;
+}
+
 /* Water tap with drop animation. */
 .water-tap {
     position: relative;
