@@ -8,8 +8,12 @@ const svgImages = [
   "images/station4.svg",
   "images/station5.svg",
   "images/station6.svg",
-  "images/water-drop.svg",
-  "images/water-tap.svg",
+  "images/station1.svg",
+  "images/station2.svg",
+  "images/station3.svg",
+  "images/station4.svg",
+  "images/station5.svg",
+  "images/station6.svg",
 ];
 
 console.log(svgImages);
