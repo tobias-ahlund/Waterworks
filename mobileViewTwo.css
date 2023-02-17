@@ -60,6 +60,16 @@ body {
   background-color: rgb(28, 127, 0);
 }
 
+.station-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
 .infoDivRight {
   position: absolute;
   bottom: 100px;
