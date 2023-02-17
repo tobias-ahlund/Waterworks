@@ -25,7 +25,7 @@ body {
   width: 100%;
 }
 
-.line-1 {
+.line-1, .line-2 {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,22 +34,17 @@ body {
   gap: 200px;
 }
 
+.line-2 {
+  margin-top: 150px;
+}
+
 .wave {
   width: 1px;
   background-color: black;
 }
 
-.line-2 {
-  margin-top: 120px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 250px;
-}
-
 .stationCircle {
+  position: relative;
   height: 100px;
   width: 100px;
   display: flex;
@@ -57,12 +52,38 @@ body {
   align-items: center;
   border-radius: 100%;
   background-color: rgb(28, 127, 0);
+  border: solid 6px rgb(133, 217, 110);
 }
 
-.infoDiv {
-  height: 100px;
-  width: 100px;
+.station-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.infoDivRight {
+  position: absolute;
+  bottom: 100px;
+  right: 1px;
+  margin-top: 0;
+  height: 150px;
+  width: 600px;
   background-color: red;
+  border-radius: 10px;
+}
+
+.infoDivLeft {
+  position: absolute;
+  margin-top: 0;
+  top: 100px;
+  height: 150px;
+  width: 600px;
+  background-color: red;
+  border-radius: 10px;
 }
 
 .station-image {
