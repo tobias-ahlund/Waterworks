@@ -12,8 +12,6 @@ const svgImages = [
   "images/water-tap.svg",
 ];
 
-console.log(svgImages);
-
 // Fetch data from data.goteborg.se.
 fetch(
   "https://data.goteborg.se/RiverService/v1.1/MeasureSites/76cab10c-716f-4d10-8750-419a0802b847?format=json"
@@ -27,16 +25,16 @@ fetch(
     const firstHalf = data.slice(0, half);
     const secondHalf = data.slice(half);
 
-    console.log(firstHalf);
-    console.log(secondHalf);
-
     //loop
     firstHalf.forEach((station) => {
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
+
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line1.append(info);
       });
     });
 
@@ -45,10 +43,12 @@ fetch(
       stationCircle.classList.add("stationCircle");
       line2.append(stationCircle);
 
+      //svg
+
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line2.append(info);
       });
     });
   });
-
-console.log("funka");
