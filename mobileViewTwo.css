@@ -25,28 +25,22 @@ body {
   width: 100%;
 }
 
-.line-1 {
+.line-1, .line-2 {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 200px;
+}
+
+.line-2 {
+  margin-top: 150px;
 }
 
 .wave {
   width: 1px;
   background-color: black;
-}
-
-.line-2 {
-  margin-top: 150px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
 }
 
 .stationCircle {
