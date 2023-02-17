@@ -61,4 +61,11 @@ fetch(
     });
   });
 
+  const addImages = (images, container) => {
+    images.forEach(image => {
+      const img = document.createElement("img");
+      img.src=image;
+      container.append(img);
+    });
+  }
 console.log("funka");
