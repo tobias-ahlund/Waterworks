@@ -26,14 +26,28 @@ fetch(
     console.log(firstHalf);
     console.log(secondHalf);
 
+        // Counter for looping through image array.
+        let i = 0;
+
+
     //loop
     firstHalf.forEach((station) => {
       let img = new Image();
+      img.classList.add("station-image");
       img.src = svgImages[i];
 
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
+
+      stationCircle.append(img);
+
+      i ++;
+
+      if (i == svgImages.length) {
+        i = 0;
+      };
+
       stationCircle.addEventListener("click", () => {
         const info = document.createElement("div");
         info.classList.add("infoDiv");
