@@ -8,8 +8,6 @@ const svgImages = [
   "images/station4.svg",
   "images/station5.svg",
   "images/station6.svg",
-  "images/water-drop.svg",
-  "images/water-tap.svg",
 ];
 
 // Fetch data from data.goteborg.se.
@@ -25,12 +23,17 @@ fetch(
     const firstHalf = data.slice(0, half);
     const secondHalf = data.slice(half);
 
+    console.log(firstHalf);
+    console.log(secondHalf);
+
     //loop
     firstHalf.forEach((station) => {
+      let img = new Image();
+      img.src = svgImages[i];
+
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
-
       stationCircle.addEventListener("click", () => {
         const info = document.createElement("div");
         info.classList.add("infoDiv");
@@ -52,3 +55,5 @@ fetch(
       });
     });
   });
+
+console.log("funka");
