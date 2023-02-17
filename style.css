@@ -70,9 +70,6 @@ section {
   padding-top: 0px;
   padding-bottom: 10px;
 }
-#btnContainer > input {
-  /* display: none; */
-}
 #btnContainer > * {
   text-decoration: none;
   text-align: center;
@@ -132,16 +129,26 @@ section {
 }
 
 /* read more button */
-#readMoreTarget {
+.readMoreState {
+  display: none;
+}
+.readMoreTarget {
   opacity: 0;
   max-height: 0;
   font-size: 0;
   transition: 0.25s ease;
 }
-#btnContainer > input:checked ~ #introContainer #readMoreTarget {
+.readMoreState:checked ~ .readMoreWrap .readMoreTarget {
   opacity: 1;
   font-size: inherit;
   max-height: 990em;
+}
+.readMoreTrigger::before {
+  content: 'Read more';
+}
+
+.readMoreState:checked ~ .readMoreTrigger::before {
+  content: 'Show less';
 }
 
 /* Water tap with drop animation. */

@@ -20,18 +20,18 @@
         <div class="bubble"></div>
         <div class="bubble"></div>
       </div>
-      <div id="introContainer">
+      <input type="checkbox" class="readMoreState"
+          id="readMoreBTN"></input>
+      <div class="readMoreWrap" id="introContainer">
         <h1>Welcome to Waterworks!</h1>
         <p>
           Have you ever wondered about the current water level of Nedsjöns Dämme
           or how many cubic meters of water per second that is flowing out of
-          Torshamnen? Well, <span id="readMoreTarget">look no further. With Waterworks we have made the information from Gothenburg’s municipality about Mölndalsån’s dams (?) available and presented in a user-friendly way. Feast your eyes on our infographic below.
+          Torshamnen? Well, <span class="readMoreTarget">look no further. With Waterworks we have made the information from Gothenburg’s municipality about Mölndalsån’s dams (?) available and presented in a user-friendly way. Feast your eyes on our infographic below.
           </span>
         </p>
         <div id="btnContainer">
-          <input type="checkbox" id="readMoreState"><div>
-            <span>Ream more</span>
-          </div></input>
+          <label class="readMoreTrigger" for="readMoreBTN"></label>
           <a type="button" href="#about-us">About us</a>
         </div>
       </div>
@@ -41,14 +41,14 @@
           scroll down to find out more about the amazing system that keeps our
           city safe from flooding!
         </p>
-          <a id="next-container"href="#about-us">
+          <a id="next-container"href="#sectionTwo">
             <div id="nextBtn"></div>
               <div class="arrow"></div>
             </div>
           </a>
       </div>
     </section>
-    <div class="animate-water"></div>
+    <section id="sectionTwo"></section>
     <article id="about-us" class="about-us-wrapper">
       <h2 class="about-us-header">About us</h2>
       <p class="about-us-paragraph">
