@@ -9,8 +9,10 @@ waterDrop.classList.add("water-drop");
 waterDrop.src="images/water-drop.svg";
 waterDrop.alt="water drop";
 
-document.body.append(waterTap);
-document.body.append(waterDrop);
+animateWater = document.querySelector(".animate-water");
+
+animateWater.append(waterTap);
+animateWater.append(waterDrop);
 
 let stationNumber = 1;
 

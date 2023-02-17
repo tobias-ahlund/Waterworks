@@ -95,29 +95,35 @@ section {
 }
 
 /* Water tap with drop animation. */
+.animate-water {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 650px;
+}
+
 .water-tap {
-  position: relative;
+  width: 300px;
 }
 
 .water-drop {
-  width: 80px;
-  position: absolute;
-  height: 80px;
-  top: 270px;
-  left: 300px;
-  animation: test 800ms ease-out infinite;
+  width: 60px;
+  animation: drip 800ms ease-out infinite;
+  align-self: flex-end;
 }
 
-@keyframes test {
+@keyframes drip {
   25% {
     transform: scale(1, 1);
   }
   50% {
-    top: 500px;
+    margin-top: 300px;
     transform: scale(2, 0.1);
   }
   100% {
-    top: 500px;
+    margin-top: 300px;
     transform: scale(2, 0.01);
   }
 }
