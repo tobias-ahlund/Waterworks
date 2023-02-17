@@ -13,7 +13,9 @@ body {
   height: 491px;
   width: 491px;
   border-radius: 50%;
+  border-right: 4px solid black;
   border-bottom: 4px solid black;
+  border-left: 4px solid black;
 }
 .circle-top {
   background-color: rgb(168, 87, 87);
@@ -33,7 +35,7 @@ body {
 }
 
 .box {
-  position: relative;
+  /* position: relative; */
   background-color: aqua;
   width: 5000px;
   height: 980px;
@@ -58,9 +60,10 @@ section {
   display: flex;
   justify-content: center;
 }
-.products-row {
-  display: flex;
-  flex-direction: row;
+.wrapper {
+  position: relative;
+  /* display: flex;
+  flex-direction: row; */
   white-space: nowrap;
 }
 
@@ -76,6 +79,6 @@ section {
   width: 50px;
   background-color: black;
   z-index: 20;
-  left: 10px;
-  top: 10px;
+  left: 500px;
+  top: 150px;
 }
