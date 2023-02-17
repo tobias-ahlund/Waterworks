@@ -52,6 +52,9 @@ body {
 .stationCircle {
   height: 100px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
   background-color: rgb(28, 127, 0);
 }
@@ -60,4 +63,9 @@ body {
   height: 100px;
   width: 100px;
   background-color: red;
+}
+
+.station-image {
+  height: 60%;
+  width: 60%;
 }

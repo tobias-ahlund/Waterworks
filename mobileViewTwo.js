@@ -33,6 +33,7 @@ fetch(
     //loop
     firstHalf.forEach((station) => {
       let img = new Image();
+      img.classList.add("station-image");
       img.src = svgImages[i];
 
       const stationCircle = document.createElement("div");
