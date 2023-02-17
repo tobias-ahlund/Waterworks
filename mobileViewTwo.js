@@ -36,6 +36,10 @@ fetch(
       img.src = svgImages[i];
 
       const stationCircle = document.createElement("div");
+      const stationTitle = document.createElement("p");
+      stationTitle.textContent = station.Description;
+      stationCircle.append(stationTitle);
+      stationTitle.classList.add("station-name");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
 
