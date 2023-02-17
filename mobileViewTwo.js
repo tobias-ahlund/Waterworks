@@ -35,12 +35,19 @@ fetch(
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
+      stationCircle.addEventListener("click", () => {
+        console.log("Hello");
+      });
     });
 
     secondHalf.forEach((secondStation) => {
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line2.append(stationCircle);
+
+      stationCircle.addEventListener("click", () => {
+        console.log("Hello");
+      });
     });
   });
 
