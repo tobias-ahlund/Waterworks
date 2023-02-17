@@ -8,12 +8,6 @@ const svgImages = [
   "images/station4.svg",
   "images/station5.svg",
   "images/station6.svg",
-  "images/station1.svg",
-  "images/station2.svg",
-  "images/station3.svg",
-  "images/station4.svg",
-  "images/station5.svg",
-  "images/station6.svg",
 ];
 
 console.log(svgImages);
@@ -41,13 +35,18 @@ fetch(
     firstHalf.forEach((station) => {
       let img = new Image();
       img.src = svgImages[i];
-      i ++;
       
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
 
       stationCircle.append(img);
+
+      i ++;
+
+      if (i == svgImages.length) {
+        i = 0;
+      };
 
       stationCircle.addEventListener("click", () => {
         console.log("Hello");
