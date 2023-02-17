@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'sans-serif';
+  font-family: "Inter", "sans-serif";
   --ltblue: #d7f2fa;
   --ltgreen: #9fe2bf;
   --darkgreen: #2e8b57;
@@ -118,7 +118,7 @@ section {
 }
 
 /* Water tap with drop animation. */
-.animate-water {
+/* .animate-water {
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -135,6 +135,26 @@ section {
   width: 60px;
   animation: drip 800ms ease-out infinite;
   align-self: flex-end;
+} */
+
+.animate-water {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 280px;
+  margin-top: 20px;
+}
+
+.water-tap {
+  width: 100%;
+}
+
+.water-drop {
+  width: 15%;
+  animation: drip 800ms ease-out infinite;
+  align-self: flex-end;
 }
 
 @keyframes drip {
@@ -142,11 +162,11 @@ section {
     transform: scale(1, 1);
   }
   50% {
-    margin-top: 300px;
+    margin-top: 75px;
     transform: scale(2, 0.1);
   }
   100% {
-    margin-top: 300px;
+    margin-top: 75px;
     transform: scale(2, 0.01);
   }
 }

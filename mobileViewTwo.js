@@ -10,8 +10,6 @@ const svgImages = [
   "images/station6.svg",
 ];
 
-console.log(svgImages);
-
 // Fetch data from data.goteborg.se.
 fetch(
   "https://data.goteborg.se/RiverService/v1.1/MeasureSites/76cab10c-716f-4d10-8750-419a0802b847?format=json"
@@ -28,28 +26,18 @@ fetch(
     console.log(firstHalf);
     console.log(secondHalf);
 
-    // Counter for looping through image array.
-    let i = 0;
-
     //loop
     firstHalf.forEach((station) => {
       let img = new Image();
       img.src = svgImages[i];
-      
+
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
-
-      stationCircle.append(img);
-
-      i ++;
-
-      if (i == svgImages.length) {
-        i = 0;
-      };
-
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line1.append(info);
       });
     });
 
@@ -58,17 +46,14 @@ fetch(
       stationCircle.classList.add("stationCircle");
       line2.append(stationCircle);
 
+      //svg
+
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line2.append(info);
       });
     });
   });
 
-  const addImages = (images, container) => {
-    images.forEach(image => {
-      const img = document.createElement("img");
-      img.src=image;
-      container.append(img);
-    });
-  }
 console.log("funka");
