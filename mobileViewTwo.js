@@ -30,11 +30,21 @@ fetch(
     console.log(firstHalf);
     console.log(secondHalf);
 
+    // Counter for looping through image array.
+    let i = 0;
+
     //loop
     firstHalf.forEach((station) => {
+      let img = new Image();
+      img.src = svgImages[i];
+      i ++;
+      
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
+
+      stationCircle.append(img);
+
       stationCircle.addEventListener("click", () => {
         console.log("Hello");
       });
