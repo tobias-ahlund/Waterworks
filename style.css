@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter", "sans-serif";
+  font-family: 'Inter', 'sans-serif';
   --ltblue: #d7f2fa;
   --ltgreen: #9fe2bf;
   --darkgreen: #2e8b57;
@@ -70,7 +70,10 @@ section {
   padding-top: 0px;
   padding-bottom: 10px;
 }
-#btnContainer > a {
+#btnContainer > input {
+  /* display: none; */
+}
+#btnContainer > * {
   text-decoration: none;
   text-align: center;
   font-size: 20px;
@@ -81,11 +84,12 @@ section {
   border: none;
   color: white;
   font-weight: 500;
+  cursor: pointer;
 }
 #btnContainer :nth-child(2) {
   background-color: var(--darkgreen) !important;
 }
-#btnContainer > a:hover,
+#btnContainer > *:hover,
 :focus {
   background-color: white !important;
   color: black !important;
@@ -115,6 +119,19 @@ section {
   bottom: 0;
   margin: auto;
   clip-path: polygon(48% 100%, 0 0, 100% 0);
+}
+
+/* read more button */
+#readMoreTarget {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+#btnContainer > input:checked ~ #introContainer #readMoreTarget {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 990em;
 }
 
 /* Water tap with drop animation. */
