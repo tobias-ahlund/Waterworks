@@ -8,11 +8,7 @@ const svgImages = [
   "images/station4.svg",
   "images/station5.svg",
   "images/station6.svg",
-  "images/water-drop.svg",
-  "images/water-tap.svg",
 ];
-
-console.log(svgImages);
 
 // Fetch data from data.goteborg.se.
 fetch(
@@ -32,11 +28,16 @@ fetch(
 
     //loop
     firstHalf.forEach((station) => {
+      let img = new Image();
+      img.src = svgImages[i];
+
       const stationCircle = document.createElement("div");
       stationCircle.classList.add("stationCircle");
       line1.append(stationCircle);
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line1.append(info);
       });
     });
 
@@ -45,8 +46,12 @@ fetch(
       stationCircle.classList.add("stationCircle");
       line2.append(stationCircle);
 
+      //svg
+
       stationCircle.addEventListener("click", () => {
-        console.log("Hello");
+        const info = document.createElement("div");
+        info.classList.add("infoDiv");
+        line2.append(info);
       });
     });
   });
