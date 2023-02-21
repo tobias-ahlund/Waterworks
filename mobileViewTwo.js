@@ -40,10 +40,8 @@ fetch(
         const stationCircle = document.createElement("div");
         const stationTitle = document.createElement("p");
         stationTitle.textContent = station.Description;
-        stationCircle.append(stationTitle);
         stationTitle.classList.add("station-name");
         stationCircle.classList.add("stationCircle");
-        container.append(stationCircle);
 
         stationCircle.append(img);
 
@@ -53,10 +51,16 @@ fetch(
           i = 0;
         }
 
+        const wrapperDiv = document.createElement("div");
+        wrapperDiv.classList.add("wrapperDiv");
+        container.append(wrapperDiv);
+        const infoDivName = document.createElement("div");
+        wrapperDiv.append(stationCircle);
+        wrapperDiv.append(infoDivName);
+        wrapperDiv.append(stationTitle);
+
         stationCircle.addEventListener("click", () => {
-          const infoDivName = document.createElement("div");
-          infoDivName.classList.add(`${infoClass}`);
-          stationCircle.append(infoDivName);
+          infoDivName.classList.toggle("active");
         });
       });
     }
