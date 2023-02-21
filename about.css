@@ -59,6 +59,13 @@ sub {
     font-size: 80%;
 }
 
+hr {
+    height: 1px;
+    background-color: #2a6070;
+    margin: 50px;
+    border: none;
+}
+
 @media screen and (min-width: 700px) {
     .about-us-wrapper {
         align-items: flex-start;
