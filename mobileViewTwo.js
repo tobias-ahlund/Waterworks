@@ -31,7 +31,7 @@ fetch(
 
     //function for looping out the data and creating elements
 
-    function theLoop(infoDivName, infoClass, container, data) {
+    function theLoop(infoDivName, container, data) {
       data.forEach((station) => {
         let img = new Image();
         img.classList.add("station-image");
@@ -58,6 +58,11 @@ fetch(
         wrapperDiv.append(stationCircle);
         wrapperDiv.append(infoDivName);
         wrapperDiv.append(stationTitle);
+        const infoStationName = station.Description;
+        infoDivName.classList.add("hidden");
+        infoDivName.append(infoStationName);
+
+        console.log(station.MeasureParameters[0].CurrentValue);
 
         wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
@@ -65,8 +70,8 @@ fetch(
       });
     }
 
-    theLoop("infoLeft", "infoDivLeft", line1, firstHalf);
-    theLoop("infoRight", "infoDivRight", line2, secondHalf);
+    theLoop("infoLeft", line1, firstHalf);
+    theLoop("infoRight", line2, secondHalf);
 
     //The original loop, saved as fallback.
     // firstHalf.forEach((station) => {

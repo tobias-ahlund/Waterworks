@@ -70,12 +70,18 @@ body {
   text-align: center;
 }
 
-.infoDivRight {
+/* .infoDivRight {
+  display: none;
+} */
+
+.hidden {
   display: none;
 }
 
 .active {
   position: fixed;
+  display: flex;
+  justify-content: center;
   height: 150px;
   width: 80%;
   height: 500px;
@@ -87,9 +93,9 @@ body {
   border-radius: 10px;
 }
 
-.infoDivLeft {
+/* .infoDivLeft {
   display: none;
-}
+} */
 
 .station-image {
   height: 60%;
