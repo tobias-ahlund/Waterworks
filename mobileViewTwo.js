@@ -21,7 +21,7 @@ fetch(
     const half = Math.ceil(data.length / 2);
 
     const firstHalf = data.slice(0, half);
-    const secondHalf = data.slice(half);s
+    const secondHalf = data.slice(half);
 
     console.log(firstHalf);
     console.log(secondHalf);
@@ -42,7 +42,7 @@ fetch(
         stationTitle.textContent = station.Description;
         stationCircle.append(stationTitle);
         stationTitle.classList.add("station-name");
-        stationCircle.classList.add("station-circle");
+        stationCircle.classList.add("stationCircle");
         container.append(stationCircle);
 
         stationCircle.append(img);
@@ -61,8 +61,8 @@ fetch(
       });
     }
 
-    theLoop("infoLeft", "info-div-left", line1, firstHalf);
-    theLoop("infoRight", "info-div-right", line2, secondHalf);
+    theLoop("infoLeft", "infoDivLeft", line1, firstHalf);
+    theLoop("infoRight", "infoDivRight", line2, secondHalf);
 
     //The original loop, saved as fallback.
     // firstHalf.forEach((station) => {
