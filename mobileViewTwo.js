@@ -72,21 +72,27 @@ fetch(
         const sg = document.createElement("p");
         sg.classList.add("sg");
 
-        const current = document.createElement("p");
-
         console.log(station);
 
         // Print out info about station
         measurement.textContent = `Current water level is at: ${station.MeasureParameters[0].CurrentValue}m`;
         dg.textContent = `Upper limit is at: ${station.DG}cm`;
         sg.textContent = `Lower limit is at: ${station.SG}cm`;
-        current.textContent = `Flow is at: ${station.MeasureParameters}m3/s`;
 
         //Append info elements
         infoDivName.append(measurement);
         infoDivName.append(dg);
         infoDivName.append(sg);
-        infoDivName.append(current);
+
+        // station.MeasureParameters.forEach(measureObject => {
+        //   if(measureObject.Code.includes("Flow")){
+        //     measureObject.forEach(object => {
+        //       const flow = document.createElement("p");
+        //       flow.textContent = `Flow is at: ${measureObject.Code}m3/s`;
+        //       infoDivName.append(flow);
+        //     });
+        //   }
+        // });
 
         wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
