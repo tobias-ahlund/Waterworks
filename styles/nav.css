@@ -1,33 +1,3 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  color: white;
-  position: relative;
-  overflow-x: hidden;
-  background-color: chocolate;
-}
-html {
-  scroll-behavior: smooth;
-}
-h2 {
-  padding: 0px;
-  margin: 0px;
-}
-#header {
-  background-color: chocolate;
-  height: 100vh;
-  width: 100vw;
-}
-#content {
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
-}
-#blåhaj {
-  background-color: pink;
-  height: 100vh;
-  width: 100vw;
-}
 #nav {
   position: -webkit-sticky;
   position: sticky;
@@ -36,13 +6,14 @@ h2 {
 #nav-container {
   position: absolute;
   right: 0vw;
-  top: 65vh;
+  top: 80vh;
   font-size: larger;
   z-index: 3;
   height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  overflow-x: hidden;
 }
 .nav-item {
   display: flex;
