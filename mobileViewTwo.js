@@ -21,7 +21,7 @@ fetch(
     const half = Math.ceil(data.length / 2);
 
     const firstHalf = data.slice(0, half);
-    const secondHalf = data.slice(half);
+    const secondHalf = data.slice(half);s
 
     console.log(firstHalf);
     console.log(secondHalf);
