@@ -19,14 +19,17 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
 }
 
-.line-1, .line-2 {
+.line-1,
+.line-2 {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,8 +46,16 @@ body {
   background-color: black;
 }
 
+.wrapperDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: bisque;
+  width: 100%;
+}
+
 .stationCircle {
-  position: relative;
   height: 100px;
   width: 100px;
   display: flex;
@@ -56,35 +67,35 @@ body {
 }
 
 .station-name {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 110px;
-  bottom: 0;
-  margin: auto;
   text-align: center;
 }
 
-.infoDivRight {
-  position: absolute;
-  bottom: 100px;
-  right: 1px;
-  margin-top: 0;
+/* .infoDivRight {
+  display: none;
+} */
+
+.hidden {
+  display: none;
+}
+
+.active {
+  position: fixed;
+  display: flex;
+  justify-content: center;
   height: 150px;
-  width: 600px;
+  width: 80%;
+  height: 500px;
+  top: min(25%);
+  left: 0;
+  right: 0;
+  margin: auto;
   background-color: red;
   border-radius: 10px;
 }
 
-.infoDivLeft {
-  position: absolute;
-  margin-top: 0;
-  top: 100px;
-  height: 150px;
-  width: 600px;
-  background-color: red;
-  border-radius: 10px;
-}
+/* .infoDivLeft {
+  display: none;
+} */
 
 .station-image {
   height: 60%;

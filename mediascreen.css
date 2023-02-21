@@ -1,0 +1,18 @@
+/* desktop media */
+@media (min-width: 1000px)  {
+    #sectionOne {
+      display: grid;
+      grid-template-columns: 2;
+    }
+    #animationContainer {
+      grid-column: 2;
+    }
+    /* .box {
+        display: flex;
+        flex-wrap: wrap;
+      } */
+    /* nav ul {
+        display: flex;
+        justify-content: space-around;
+      } */
+  }
