@@ -9,6 +9,7 @@
     <title>Real Water Works</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="mediascreen.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
       rel="stylesheet"
     />
+    <script src="nav.js" defer></script>
   </head>
   <body>
-    <section id="sectionOne">
+    <div id="nav">
+      <div id="nav-container">
+        <div class="nav-item">
+          <a href="#sectionOne">Welcome</a>
+          <div></div>
+        </div>
+        <div class="nav-item">
+          <a href="#sectionTwo">Stations</a>
+          <div></div>
+        </div>
+        <div class="nav-item">
+          <a href="#about-us">About us</a>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <section id="sectionOne" class="page" data-index="0">
       <div class="bubbleContainer">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -51,8 +69,8 @@
           </a>
       </div>
     </section>
-    <section id="sectionTwo"></section>
-    <article id="about-us" class="about-us-wrapper">
+    <section id="sectionTwo" class="page" data-index="1"></section>
+    <article id="about-us" class="about-us-wrapper page" data-index="2">
       <h2 class="about-us-header">About us</h2>
       <p class="about-us-paragraph">
           We are a group of H<sub>2</sub>O enthusiasts<span class="show dots">...</span> <span class="hide hidden-about-content">and web development students at Yrgo in Gothenburg. The floodgates are now open and we are excited to show you our work.

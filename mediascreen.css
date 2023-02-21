@@ -1,5 +1,5 @@
 /* desktop media */
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   #sectionOne {
     padding: 10vh 10vw 0vh 10vw;
     display: grid;
@@ -24,7 +24,8 @@
     padding-top: 15px;
   }
   #btnContainer > * {
-    width: 28%;
+    width: 32%;
+    padding: 14px 0px 14px;
   }
   #introContainer {
     grid-column: 1;
@@ -32,6 +33,14 @@
   }
   #next-container {
     display: none;
+  }
+
+  #animationContainer {
+    padding-left: 20%;
+    padding-top: 10%;
+  }
+  .animate-water {
+    scale: 1.6;
   }
   #animationContainer > p {
     display: none;
@@ -54,5 +63,18 @@
 
   #introContainer p {
     padding: 0 0 0 0;
+  }
+
+  /*about us desktop*/
+
+  .about-us-button {
+    display: none;
+  }
+
+  .hidden-about-content{
+    display: block;
+  }
+  #nav {
+    visibility: visible;
   }
 }
