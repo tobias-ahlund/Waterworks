@@ -59,7 +59,7 @@ fetch(
         wrapperDiv.append(infoDivName);
         wrapperDiv.append(stationTitle);
 
-        stationCircle.addEventListener("click", () => {
+        wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
         });
       });
