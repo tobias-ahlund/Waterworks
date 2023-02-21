@@ -61,15 +61,32 @@ fetch(
         const infoStationName = station.Description;
         infoDivName.classList.add("hidden");
         infoDivName.append(infoStationName);
+
+        // Create info elements
         const measurement = document.createElement("p");
         measurement.classList.add("measurement");
 
+        const dg = document.createElement("p");
+        dg.classList.add("dg");
+
+        const sg = document.createElement("p");
+        sg.classList.add("sg");
+
+        const current = document.createElement("p");
+
+        console.log(station);
+
         // Print out info about station
-        measurement.textContent = `Nuvarande vatten nivå ligger på ${station.MeasureParameters[0].CurrentValue}`;
+        measurement.textContent = `Current water level is at: ${station.MeasureParameters[0].CurrentValue}m`;
+        dg.textContent = `Upper limit is at: ${station.DG}cm`;
+        sg.textContent = `Lower limit is at: ${station.SG}cm`;
+        current.textContent = `Flow is at: ${station.MeasureParameters}m3/s`;
 
+        //Append info elements
         infoDivName.append(measurement);
-
-        console.log(station.MeasureParameters[0].CurrentValue);
+        infoDivName.append(dg);
+        infoDivName.append(sg);
+        infoDivName.append(current);
 
         wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
