@@ -82,6 +82,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 150px;
   width: 80%;
   height: 500px;
