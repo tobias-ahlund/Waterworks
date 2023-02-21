@@ -61,6 +61,13 @@ fetch(
         const infoStationName = station.Description;
         infoDivName.classList.add("hidden");
         infoDivName.append(infoStationName);
+        const measurement = document.createElement("p");
+        measurement.classList.add("measurement");
+
+        // Print out info about station
+        measurement.textContent = `Nuvarande vatten nivå ligger på ${station.MeasureParameters[0].CurrentValue}`;
+
+        infoDivName.append(measurement);
 
         console.log(station.MeasureParameters[0].CurrentValue);
 
