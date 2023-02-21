@@ -42,7 +42,7 @@ fetch(
         stationTitle.textContent = station.Description;
         stationCircle.append(stationTitle);
         stationTitle.classList.add("station-name");
-        stationCircle.classList.add("stationCircle");
+        stationCircle.classList.add("station-circle");
         container.append(stationCircle);
 
         stationCircle.append(img);
@@ -61,8 +61,8 @@ fetch(
       });
     }
 
-    theLoop("infoLeft", "infoDivLeft", line1, firstHalf);
-    theLoop("infoRight", "infoDivRight", line2, secondHalf);
+    theLoop("infoLeft", "info-div-left", line1, firstHalf);
+    theLoop("infoRight", "info-div-right", line2, secondHalf);
 
     //The original loop, saved as fallback.
     // firstHalf.forEach((station) => {

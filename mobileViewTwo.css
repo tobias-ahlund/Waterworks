@@ -43,7 +43,7 @@ body {
   background-color: black;
 }
 
-.stationCircle {
+.station-circle {
   position: relative;
   height: 100px;
   width: 100px;
@@ -65,7 +65,7 @@ body {
   text-align: center;
 }
 
-.infoDivRight {
+.info-div-right {
   position: absolute;
   bottom: 100px;
   right: 1px;
@@ -76,7 +76,7 @@ body {
   border-radius: 10px;
 }
 
-.infoDivLeft {
+.info-div-left {
   position: absolute;
   margin-top: 0;
   top: 100px;
