@@ -64,6 +64,7 @@ body {
   border-radius: 100%;
   background-color: rgb(28, 127, 0);
   border: solid 6px rgb(133, 217, 110);
+  cursor: pointer;
 }
 
 .station-name {
@@ -101,4 +102,15 @@ body {
 .station-image {
   height: 60%;
   width: 60%;
+}
+
+/* Animation for stations on click. */
+@keyframes spinAnimation {
+  0% {transform: scale(1, 1);}
+  50% {transform: scale(0.1, 1); transform: scaleX(-1);}
+  100% {transform: scale(1, 1); transform: scaleX(1);}
+}
+
+.animate {
+  animation: spinAnimation 750ms ease-in-out;
 }

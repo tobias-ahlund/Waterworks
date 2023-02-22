@@ -97,6 +97,25 @@ fetch(
         wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
         });
+
+        // Adds the "animate" class to the element which starts the animation.
+        activateAnimation();
+        function activateAnimation() {
+            stationCircle.addEventListener("click", () => {
+                stationCircle.classList.add("animate");
+                removeAnimation();
+            });
+        };
+
+        // Removes the "animate" class from the element right after it's run (750ms).
+        function removeAnimation() {
+            setTimeout(() => {
+                stationCircle.classList.remove("animate");
+            }, 750);
+        }; 
+        
+
+
       });
     }
 
@@ -150,3 +169,6 @@ fetch(
 console.log("funka");
 
 //funktion
+
+let animate = document.querySelector(".animate");
+
