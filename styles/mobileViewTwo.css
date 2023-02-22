@@ -19,7 +19,6 @@ body {
 }
 
 .container {
-  position: relative;
   display: flex;
   justify-content: space-evenly;
   height: 100%;
