@@ -51,7 +51,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: bisque;
+
   width: 100%;
 }
 
@@ -106,9 +106,17 @@ body {
 
 /* Animation for stations on click. */
 @keyframes spinAnimation {
-  0% {transform: scale(1, 1);}
-  50% {transform: scale(0.1, 1); transform: scaleX(-1);}
-  100% {transform: scale(1, 1); transform: scaleX(1);}
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.1, 1);
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scale(1, 1);
+    transform: scaleX(1);
+  }
 }
 
 .animate {
