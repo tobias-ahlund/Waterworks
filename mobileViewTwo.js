@@ -72,45 +72,29 @@ fetch(
         const sg = document.createElement("p");
         sg.classList.add("sg");
 
+        const current = document.createElement("p");
+
         console.log(station);
 
         // Print out info about station
         measurement.textContent = `Current water level is at: ${station.MeasureParameters[0].CurrentValue}m`;
         dg.textContent = `Upper limit is at: ${station.DG}cm`;
         sg.textContent = `Lower limit is at: ${station.SG}cm`;
+        current.textContent = `Flow is at: ${station.MeasureParameters}m3/s`;
 
         //Append info elements
         infoDivName.append(measurement);
         infoDivName.append(dg);
         infoDivName.append(sg);
+        infoDivName.append(current);
 
-        station.MeasureParameters.forEach(measureObject => {
-          if(measureObject.Code.includes("Flow")){
-              const flow = document.createElement("p");
-              flow.textContent = `Flow is at: ${measureObject.CurrentValue}m3/s`;
-              infoDivName.append(flow);
-          }
-        });
-
-        wrapperDiv.addEventListener("click", () => {
+        stationCircle.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
         });
 
-        // Adds the "animate" class to the element which starts the animation.
-        activateAnimation();
-        function activateAnimation() {
-            stationCircle.addEventListener("click", () => {
-                stationCircle.classList.add("animate");
-                removeAnimation();
-            });
-        };
-
-        // Removes the "animate" class from the element right after it's run (750ms).
-        function removeAnimation() {
-            setTimeout(() => {
-                stationCircle.classList.remove("animate");
-            }, 750);
-        };
+        infoDivName.addEventListener("click", () => {
+          infoDivName.classList.toggle("active");
+        });
       });
     }
 
@@ -164,6 +148,3 @@ fetch(
 console.log("funka");
 
 //funktion
-
-let animate = document.querySelector(".animate");
-
