@@ -4,18 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="about.css" rel="stylesheet">
+    <title>Real Water Works</title>
+    <link rel="icon" type="image/x-icon" href="/images/water.ico" />
+    <title>Real Water Works</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/mediascreen.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
       rel="stylesheet"
     />
+    <script src="nav.js" defer></script>
   </head>
   <body>
-    <section id="sectionOne">
+    <div id="nav">
+      <div id="nav-container">
+        <div class="nav-item">
+          <a href="#sectionOne">Welcome</a>
+          <div></div>
+        </div>
+        <div class="nav-item">
+          <a href="#sectionTwo">Stations</a>
+          <div></div>
+        </div>
+        <div class="nav-item">
+          <a href="#about-us">About us</a>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <section id="sectionOne" class="page" data-index="0">
       <div class="bubbleContainer">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -48,8 +69,8 @@
           </a>
       </div>
     </section>
-    <section id="sectionTwo"></section>
-    <article id="about-us" class="about-us-wrapper">
+    <section id="sectionTwo" class="page" data-index="1"></section>
+    <article id="about-us" class="about-us-wrapper page" data-index="2">
       <h2 class="about-us-header">About us</h2>
       <p class="about-us-paragraph">
           We are a group of H<sub>2</sub>O enthusiasts<span class="show dots">...</span> <span class="hide hidden-about-content">and web development students at Yrgo in Gothenburg. The floodgates are now open and we are excited to show you our work.
@@ -58,7 +79,7 @@
       </p>
       <button class="about-us-button">Show more</button>
     </article>
-  
+    <hr>
   </body>
   <script src="script.js"></script>
   <script src="about.js"></script>

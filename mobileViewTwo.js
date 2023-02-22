@@ -31,7 +31,7 @@ fetch(
 
     //function for looping out the data and creating elements
 
-    function theLoop(infoDivName, infoClass, container, data) {
+    function theLoop(infoDivName, container, data) {
       data.forEach((station) => {
         let img = new Image();
         img.classList.add("station-image");
@@ -40,10 +40,8 @@ fetch(
         const stationCircle = document.createElement("div");
         const stationTitle = document.createElement("p");
         stationTitle.textContent = station.Description;
-        stationCircle.append(stationTitle);
         stationTitle.classList.add("station-name");
         stationCircle.classList.add("stationCircle");
-        container.append(stationCircle);
 
         stationCircle.append(img);
 
@@ -53,16 +51,76 @@ fetch(
           i = 0;
         }
 
-        stationCircle.addEventListener("click", () => {
-          const infoDivName = document.createElement("div");
-          infoDivName.classList.add(`${infoClass}`);
-          stationCircle.append(infoDivName);
+        const wrapperDiv = document.createElement("div");
+        wrapperDiv.classList.add("wrapperDiv");
+        container.append(wrapperDiv);
+        const infoDivName = document.createElement("div");
+        wrapperDiv.append(stationCircle);
+        wrapperDiv.append(infoDivName);
+        wrapperDiv.append(stationTitle);
+        const infoStationName = station.Description;
+        infoDivName.classList.add("hidden");
+        infoDivName.append(infoStationName);
+
+        // Create info elements
+        const measurement = document.createElement("p");
+        measurement.classList.add("measurement");
+
+        const dg = document.createElement("p");
+        dg.classList.add("dg");
+
+        const sg = document.createElement("p");
+        sg.classList.add("sg");
+
+        console.log(station);
+
+        // Print out info about station
+        measurement.textContent = `Current water level is at: ${station.MeasureParameters[0].CurrentValue}m`;
+        dg.textContent = `Upper limit is at: ${station.DG}cm`;
+        sg.textContent = `Lower limit is at: ${station.SG}cm`;
+
+        //Append info elements
+        infoDivName.append(measurement);
+        infoDivName.append(dg);
+        infoDivName.append(sg);
+
+        // station.MeasureParameters.forEach(measureObject => {
+        //   if(measureObject.Code.includes("Flow")){
+        //     measureObject.forEach(object => {
+        //       const flow = document.createElement("p");
+        //       flow.textContent = `Flow is at: ${measureObject.Code}m3/s`;
+        //       infoDivName.append(flow);
+        //     });
+        //   }
+        // });
+
+        wrapperDiv.addEventListener("click", () => {
+          infoDivName.classList.toggle("active");
         });
+
+        // Adds the "animate" class to the element which starts the animation.
+        activateAnimation();
+        function activateAnimation() {
+            stationCircle.addEventListener("click", () => {
+                stationCircle.classList.add("animate");
+                removeAnimation();
+            });
+        };
+
+        // Removes the "animate" class from the element right after it's run (750ms).
+        function removeAnimation() {
+            setTimeout(() => {
+                stationCircle.classList.remove("animate");
+            }, 750);
+        }; 
+        
+
+
       });
     }
 
-    theLoop("infoLeft", "infoDivLeft", line1, firstHalf);
-    theLoop("infoRight", "infoDivRight", line2, secondHalf);
+    theLoop("infoLeft", line1, firstHalf);
+    theLoop("infoRight", line2, secondHalf);
 
     //The original loop, saved as fallback.
     // firstHalf.forEach((station) => {
@@ -111,3 +169,6 @@ fetch(
 console.log("funka");
 
 //funktion
+
+let animate = document.querySelector(".animate");
+
