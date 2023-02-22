@@ -84,15 +84,13 @@ fetch(
         infoDivName.append(dg);
         infoDivName.append(sg);
 
-        // station.MeasureParameters.forEach(measureObject => {
-        //   if(measureObject.Code.includes("Flow")){
-        //     measureObject.forEach(object => {
-        //       const flow = document.createElement("p");
-        //       flow.textContent = `Flow is at: ${measureObject.Code}m3/s`;
-        //       infoDivName.append(flow);
-        //     });
-        //   }
-        // });
+        station.MeasureParameters.forEach(measureObject => {
+          if(measureObject.Code.includes("Flow")){
+              const flow = document.createElement("p");
+              flow.textContent = `Flow is at: ${measureObject.CurrentValue}m3/s`;
+              infoDivName.append(flow);
+          }
+        });
 
         wrapperDiv.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
@@ -112,10 +110,7 @@ fetch(
             setTimeout(() => {
                 stationCircle.classList.remove("animate");
             }, 750);
-        }; 
-        
-
-
+        };
       });
     }
 
