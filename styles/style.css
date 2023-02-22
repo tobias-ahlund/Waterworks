@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'sans-serif';
+  font-family: "Inter", "sans-serif";
   --ltblue: #d7f2fa;
   --ltgreen: #9fe2bf;
   --darkgreen: #2e8b57;
@@ -144,13 +144,12 @@ section {
   max-height: 990em;
 }
 .readMoreTrigger::before {
-  content: 'Read more';
+  content: "Read more";
 }
 
 .readMoreState:checked ~ .readMoreTrigger::before {
-  content: 'Show less';
+  content: "Show less";
 }
-
 
 /* Water tap with drop animation. */
 /* .animate-water {
