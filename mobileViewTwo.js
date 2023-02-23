@@ -26,11 +26,14 @@ fetch(
     console.log(firstHalf);
     console.log(secondHalf);
 
-    // Counter for looping through image array.
+    theLoop("infoLeft", line1, firstHalf);
+    theLoop("infoRight", line2, secondHalf);
+  });
+
+      // Counter for looping through image array.
     let i = 0;
 
     //function for looping out the data and creating elements
-
     function theLoop(infoDivName, container, data) {
       data.forEach((station) => {
         let img = new Image();
@@ -69,10 +72,8 @@ fetch(
         measurement.classList.add("measurement");
 
         const dg = document.createElement("p");
-        dg.classList.add("dg");
 
         const sg = document.createElement("p");
-        sg.classList.add("sg");
 
         const current = document.createElement("p");
 
@@ -138,53 +139,6 @@ fetch(
         }
       });
     }
-
-    theLoop("infoLeft", line1, firstHalf);
-    theLoop("infoRight", line2, secondHalf);
-
-    //The original loop, saved as fallback.
-    // firstHalf.forEach((station) => {
-    //   let img = new Image();
-    //   img.classList.add("station-image");
-    //   img.src = svgImages[i];
-
-    //   const stationCircle = document.createElement("div");
-    //   const stationTitle = document.createElement("p");
-    //   stationTitle.textContent = station.Description;
-    //   stationCircle.append(stationTitle);
-    //   stationTitle.classList.add("station-name");
-    //   stationCircle.classList.add("stationCircle");
-    //   line1.append(stationCircle);
-
-    //   stationCircle.append(img);
-
-    //   i++;
-
-    //   if (i == svgImages.length) {
-    //     i = 0;
-    //   }
-
-    //   stationCircle.addEventListener("click", () => {
-    //     const infoLeft = document.createElement("div");
-    //     infoLeft.classList.add("infoDivLeft");
-    //     stationCircle.append(infoLeft);
-    //   });
-    // });
-
-    // secondHalf.forEach((secondStation) => {
-    //   const stationCircle = document.createElement("div");
-    //   stationCircle.classList.add("stationCircle");
-    //   line2.append(stationCircle);
-
-    //   //svg
-
-    //   stationCircle.addEventListener("click", () => {
-    //     const infoRight = document.createElement("div");
-    //     infoRight.classList.add("infoDivRight");
-    //     stationCircle.append(infoRight);
-    //   });
-    // });
-  });
 
 console.log("funka");
 
