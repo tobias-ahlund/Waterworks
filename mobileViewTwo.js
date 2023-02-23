@@ -58,7 +58,9 @@ fetch(
         wrapperDiv.append(stationCircle);
         wrapperDiv.append(infoDivName);
         wrapperDiv.append(stationTitle);
-        const infoStationName = station.Description;
+        const infoStationName = document.createElement("p");
+        infoStationName.textContent = station.Description;
+        infoStationName.classList.add("info-box-headline");
         infoDivName.classList.add("hidden");
         infoDivName.append(infoStationName);
 
@@ -75,6 +77,20 @@ fetch(
         const current = document.createElement("p");
 
         console.log(station);
+
+         //Append infoDivName elements
+         const infoBoxArrow = document.createElement("div");
+         const infoBoxClose = document.createElement("img");
+         infoBoxArrow.classList.add("info-box-arrow");
+         infoBoxClose.classList.add("close-info-button");
+         infoBoxClose.src = "images/close-button.svg";
+         infoDivName.append(infoBoxArrow);
+         infoDivName.append(infoBoxClose);
+         infoDivName.append(infoStationName);
+
+         //Append info elements
+         infoDivName.append(measurement);
+         infoDivName.append(current);
 
         // Print out info about station
         measurement.textContent = `Current water level is at: ${station.MeasureParameters[0].CurrentValue}m`;

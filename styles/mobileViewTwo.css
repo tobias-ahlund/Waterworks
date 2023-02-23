@@ -50,8 +50,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   width: 100%;
+  position: relative;
 }
 
 .stationCircle {
@@ -70,33 +70,54 @@ body {
   text-align: center;
 }
 
-/* .infoDivRight {
-  display: none;
-} */
-
 .hidden {
   display: none;
 }
 
 .active {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 150px;
-  width: 80%;
-  height: 500px;
-  top: min(25%);
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: red;
+  padding: 10px;
+  position: absolute;
+  display: block;
+  top: 120%;
+  background-color: #21394F;
   border-radius: 10px;
+  margin: auto;
 }
 
-/* .infoDivLeft {
-  display: none;
-} */
+.active p {
+  color: white;
+  font-size: 13px;
+}
+
+.info-box-headline {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.info-box-arrow {
+  height: 65px;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);  
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #21394F;
+}
+
+.close-info-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.close-info-button:hover{
+  cursor: pointer;
+}
 
 .station-image {
   height: 60%;
