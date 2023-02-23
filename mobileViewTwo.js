@@ -90,8 +90,6 @@ fetch(
 
          //Append info elements
          infoDivName.append(measurement);
-         infoDivName.append(dg);
-         infoDivName.append(sg);
          infoDivName.append(current);
 
         // Print out info about station
