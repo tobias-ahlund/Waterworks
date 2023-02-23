@@ -47,6 +47,10 @@
     display: none;
   }
 
+  .arrow-container {
+    display: none;
+  }
+
   #animationContainer {
     padding-left: 20%;
     padding-top: 10%;
