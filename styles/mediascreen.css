@@ -112,17 +112,18 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 200px;
+    gap: 670px;
   }
 
   .line-1 {
     align-items: flex-end;
+    margin-left: 480px;
   }
 
   .line-2 {
-    margin-left: 150px;
     align-items: flex-start;
     margin-top: 0;
+    margin-left: 100px;
   }
 
   .wrapperDiv {
@@ -153,6 +154,11 @@
   .center-content {
     display: flex;
     justify-content: center;
+  }
+
+  .stationCircle {
+    height: 130px;
+    width: 130px;
   }
 
   .wave {
