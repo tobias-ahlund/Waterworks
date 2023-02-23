@@ -1,3 +1,11 @@
+* {
+  --ltblue: #d7f2fa;
+  --ltgreen: #9fe2bf;
+  --darkgreen: #2e8b57;
+  --turquoise: #20b2aa;
+  --black: #000000;
+}
+
 .lakes-section {
   display: flex;
   flex-direction: column;
@@ -27,9 +35,29 @@
   margin-top: 150px;
 }
 
-.wave {
+/* .wave {
   width: 1px;
   background-color: black;
+} */
+.wave {
+  background-color: var(--turquoise);
+  width: 355px;
+  --mask: radial-gradient(
+        565.02px at calc(100% + 500px) 50%,
+        #0000 calc(99% - 12px),
+        #000 calc(101% - 12px) 99%,
+        #0000 101%
+      )
+      calc(50% - 131px + 0.5px) calc(50% - 500px) / 262px 1000px repeat-y,
+    radial-gradient(
+        565.02px at -500px 50%,
+        #0000 calc(99% - 12px),
+        #000 calc(101% - 12px) 99%,
+        #0000 101%
+      )
+      calc(50% + 131px) 50%/262px 1000px repeat-y;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .wrapperDiv {
@@ -72,7 +100,7 @@
   position: absolute;
   display: block;
   top: 120%;
-  background-color: #21394F;
+  background-color: #21394f;
   border-radius: 10px;
   margin: auto;
 }
@@ -93,12 +121,12 @@
   top: -15%;
   left: 50%;
   z-index: -1;
-  transform: translateX(-50%);  
-  width: 0; 
-  height: 0; 
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 25px solid #21394F;
+  border-bottom: 25px solid #21394f;
 }
 
 .close-info-button {
@@ -108,7 +136,7 @@
   transform: translateX(50%) translateY(-50%);
 }
 
-.close-info-button:hover{
+.close-info-button:hover {
   cursor: pointer;
 }
 
