@@ -14,3 +14,11 @@ aboutUsButton.addEventListener("click", () => {
     }
 });
 
+let spanSelect = document.querySelector(".about-us-paragraph span");
+let aboutContent = document.querySelector(".hidden-about-content");
+
+const mediaQuery = window.matchMedia("(min-width: 700px)");
+if (mediaQuery.matches) {
+    spanSelect.classList.remove("show");
+    aboutContent.style.display = "inline";
+}
