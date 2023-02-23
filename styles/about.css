@@ -62,7 +62,7 @@ sub {
 
 hr {
     height: 1px;
-    background-color: #2a6070;
+    background-color: black;
     margin: 50px;
     border: none;
 }
@@ -73,6 +73,6 @@ hr {
     }
 
     hr {
-        margin: 100px;
+        margin: 160px;
     }
 }

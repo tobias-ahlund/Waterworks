@@ -115,6 +115,7 @@ section {
 
 #animationContainer p {
   text-align: center;
+  max-width: 500px;
   font-size: 20px;
   padding: 0px 3rem 0px;
 }
@@ -194,7 +195,8 @@ section {
   align-items: center;
   width: 30%;
   height: 280px;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 35%;
 }
 
 .water-tap {
@@ -205,6 +207,7 @@ section {
   width: 15%;
   animation: drip 600ms ease-out infinite;
   align-self: flex-end;
+  margin-right: 5px;
 }
 
 @keyframes drip {
