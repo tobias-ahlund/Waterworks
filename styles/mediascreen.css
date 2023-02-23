@@ -1,4 +1,16 @@
 /* desktop media */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "sans-serif";
+  --ltblue: #d7f2fa;
+  --ltgreen: #9fe2bf;
+  --darkgreen: #2e8b57;
+  --turquoise: #20b2aa;
+  --black: #000000;
+} */
+
 @media (min-width: 1000px) {
   #sectionOne {
     padding: 10vh 10vw 0vh 10vw;
@@ -98,9 +110,13 @@
     xwidth: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 200px;
+  }
+
+  .line-2 {
+    margin-left: 150px;
   }
 
   .wrapperDiv {
@@ -131,6 +147,28 @@
   .center-content {
     display: flex;
     justify-content: center;
+  }
+
+  .wave {
+    background-color: ;
+    width: 2000px;
+    height: 400px;
+    --mask: radial-gradient(
+          414.83px at 50% calc(100% + 360px),
+          #0000 calc(99% - 6px),
+          #000 calc(101% - 6px) 99%,
+          #0000 101%
+        )
+        calc(50% - 400px) calc(50% - 103px + 0.5px) / 800px 206px repeat-x,
+      radial-gradient(
+          414.83px at 50% -360px,
+          #0000 calc(99% - 6px),
+          #000 calc(101% - 6px) 99%,
+          #0000 101%
+        )
+        50% calc(50% + 103px) / 800px 206px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
 }
 
