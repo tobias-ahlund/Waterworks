@@ -41,7 +41,6 @@
 } */
 .wave {
   background-color: var(--turquoise);
-  border-color: var(--black);
   width: 55px;
   --mask: radial-gradient(
         46.72px at calc(100% + 34.5px) 50%,
