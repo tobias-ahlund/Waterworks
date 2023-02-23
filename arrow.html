@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .img-container {
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200px;
+            height: 1000px;
+        }
+        
+        .img {
+            margin-bottom: 120px;
+            animation: hover 2s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        .img-shadow {
+            animation: shadow 2s ease-in-out infinite;
+        }
+
+        @keyframes hover {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shadow {
+            0% {
+                transform: scale(0.5, 1);
+            }
+            50% {
+                transform: scale(1, 1);
+            }
+            100% {
+                transform: scale(0.5, 1);
+            }
+        }
+    </style>
+    <div class="img-container">
+        <img class="img" src="images/arrow.svg" alt="">
+        <img class="img-shadow" src="images/arrow-shadow.svg" alt="">
+    </div>
+</body>
+</html>
