@@ -64,6 +64,12 @@ body {
   background-color: rgb(28, 127, 0);
   border: solid 6px rgb(133, 217, 110);
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.stationCircle:hover {
+  border: 6px solid #20B2AA;
+  scale: 1.05;
 }
 
 .station-name {
