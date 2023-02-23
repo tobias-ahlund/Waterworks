@@ -117,13 +117,14 @@
 
   .line-1 {
     align-items: flex-end;
-    margin-left: 480px;
+    margin-left: 350px;
   }
 
   .line-2 {
     align-items: flex-start;
     margin-top: 0;
-    margin-left: 100px;
+
+    margin-left: 750px;
   }
 
   .wrapperDiv {
@@ -163,7 +164,7 @@
 
   .wave {
     background-color: var(--turquoise);
-    width: 2700px;
+    width: 7200px;
     height: 400px;
     --mask: radial-gradient(
           414.83px at 50% calc(100% + 360px),
@@ -181,6 +182,7 @@
         50% calc(50% + 103px) / 800px 206px repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+    z-index: -1;
   }
 }
 
