@@ -120,7 +120,7 @@
 .info-box-arrow {
   height: 65px;
   position: absolute;
-  top: -15%;
+  top: -10%;
   left: 50%;
   z-index: -1;
   transform: translateX(-50%);

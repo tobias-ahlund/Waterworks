@@ -53,6 +53,7 @@
   }
   .animate-water {
     scale: 1.6;
+    width: 60%;
   }
   #animationContainer > p {
     display: none;
