@@ -155,7 +155,7 @@
   }
 
   .wave {
-    background-color: var(--ltgreen);
+    background-color: var(--turquoise);
     width: 2700px;
     height: 400px;
     --mask: radial-gradient(
