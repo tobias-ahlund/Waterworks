@@ -94,11 +94,11 @@ section {
   background-color: var(--darkgreen) !important;
 }
 
-#btnContainer :nth-child(2):hover, :focus {
+#btnContainer :nth-child(2):hover {
   background-color: darkgreen !important;
 }
 
-#btnContainer :nth-child(1):hover, :focus {
+#btnContainer :nth-child(1):hover {
   background-color: rgb(12, 110, 111);
 }
 
