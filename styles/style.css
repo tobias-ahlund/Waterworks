@@ -18,9 +18,15 @@ body {
   background-color: var(--ltblue);
   color: var(--black);
 }
+
+p {
+  line-height: 30px;
+}
+
 section {
   min-height: 100vh;
   width: 100%;
+  margin-bottom: 50px;
 }
 .bubbleContainer {
   padding-top: 5vh;
@@ -83,23 +89,30 @@ section {
   font-weight: 500;
   cursor: pointer;
 }
+
 #btnContainer :nth-child(2) {
   background-color: var(--darkgreen) !important;
 }
-#btnContainer > *:hover,
-:focus {
-  background-color: white !important;
-  color: black !important;
+
+#btnContainer :nth-child(2):hover, :focus {
+  background-color: darkgreen !important;
 }
+
+#btnContainer :nth-child(1):hover, :focus {
+  background-color: rgb(12, 110, 111);
+}
+
 #animationContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
+
 .placeholder-svg {
   display: block;
 }
+
 #animationContainer p {
   text-align: center;
   font-size: 20px;
@@ -132,25 +145,28 @@ section {
 .readMoreState {
   display: none;
 }
+
 .readMoreTarget {
   opacity: 0;
   max-height: 0;
   font-size: 0;
   transition: 0.25s ease;
 }
+
 .readMoreState:checked ~ .readMoreWrap .readMoreTarget {
   opacity: 1;
   font-size: inherit;
   max-height: 990em;
 }
-.readMoreTrigger::before {
+
+/* .readMoreTrigger::before {
   content: "Read more";
 }
 
 .readMoreState:checked ~ .readMoreTrigger::before {
   content: "Show less";
 }
-
+ */
 /* Water tap with drop animation. */
 /* .animate-water {
   display: flex;
@@ -187,7 +203,7 @@ section {
 
 .water-drop {
   width: 15%;
-  animation: drip 800ms ease-out infinite;
+  animation: drip 600ms ease-out infinite;
   align-self: flex-end;
 }
 

@@ -41,7 +41,7 @@
 .active-nav {
   padding-right: 1vw;
   font-size: xx-large !important;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   font-weight: bold;
   transition: 300ms ease-out;
 }

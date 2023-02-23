@@ -35,3 +35,13 @@ let stationNumber = 1;
 
 //         document.body.append(div);
 //     });
+
+let readButton = document.querySelector(".readMoreTrigger");
+readButton.addEventListener("click", () => {
+    if (readButton.innerText == "Read more") {
+        readButton.innerText = "Read less";
+    }
+    else if (readButton.innerText == "Read less") {
+        readButton.innerText = "Read more";
+    }
+});

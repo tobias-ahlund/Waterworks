@@ -33,7 +33,7 @@
     width: 100%;
     justify-content: start;
     padding-left: 0;
-    padding-top: 15px;
+    margin-top: 24px;
   }
   #btnContainer > * {
     width: 32%;
@@ -71,6 +71,7 @@
       2.795652173913043rem + 2.086956521739131vw,
       5.3rem
     );
+    margin-bottom: 24px;
   }
 
   #introContainer p {
