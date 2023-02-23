@@ -41,23 +41,24 @@
 } */
 .wave {
   background-color: var(--turquoise);
-  width: 355px;
+  width: 55px;
   --mask: radial-gradient(
-        565.02px at calc(100% + 500px) 50%,
-        #0000 calc(99% - 12px),
-        #000 calc(101% - 12px) 99%,
+        46.72px at calc(100% + 34.5px) 50%,
+        #0000 calc(99% - 2px),
+        #000 calc(101% - 2px) 99%,
         #0000 101%
       )
-      calc(50% - 131px + 0.5px) calc(50% - 500px) / 262px 1000px repeat-y,
+      calc(50% - 16px + 0.5px) calc(50% - 60px) / 32px 120px repeat-y,
     radial-gradient(
-        565.02px at -500px 50%,
-        #0000 calc(99% - 12px),
-        #000 calc(101% - 12px) 99%,
+        46.72px at -34.5px 50%,
+        #0000 calc(99% - 2px),
+        #000 calc(101% - 2px) 99%,
         #0000 101%
       )
-      calc(50% + 131px) 50%/262px 1000px repeat-y;
+      calc(50% + 16px) 50%/32px 120px repeat-y;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  z-index: -1;
 }
 
 .wrapperDiv {
