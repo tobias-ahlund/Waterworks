@@ -30,12 +30,13 @@ fetch(
     theLoop("infoRight", line2, secondHalf);
   });
 
-      // Counter for looping through image array.
-    let i = 0;
-
     //function for looping out the data and creating elements
     function theLoop(infoDivName, container, data) {
       data.forEach((station) => {
+        
+        // Counter for looping through image array.
+        let i = 0;
+
         let img = new Image();
         img.classList.add("station-image");
         img.src = svgImages[i];
