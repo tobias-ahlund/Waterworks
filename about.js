@@ -13,3 +13,4 @@ aboutUsButton.addEventListener("click", () => {
         aboutUsButton.innerText = "Show more";
     }
 });
+
