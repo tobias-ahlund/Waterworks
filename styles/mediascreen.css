@@ -1,5 +1,5 @@
 /* desktop media */
-/* * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@
   --darkgreen: #2e8b57;
   --turquoise: #20b2aa;
   --black: #000000;
-} */
+}
 
 @media (min-width: 1000px) {
   #sectionOne {
@@ -111,12 +111,17 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     gap: 200px;
+  }
+
+  .line-1 {
+    align-items: flex-end;
   }
 
   .line-2 {
     margin-left: 150px;
+    align-items: flex-start;
+    margin-top: 0;
   }
 
   .wrapperDiv {
@@ -150,8 +155,8 @@
   }
 
   .wave {
-    background-color: ;
-    width: 2000px;
+    background-color: var(--ltgreen);
+    width: 2700px;
     height: 400px;
     --mask: radial-gradient(
           414.83px at 50% calc(100% + 360px),
