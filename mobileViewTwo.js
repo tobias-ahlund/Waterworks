@@ -81,18 +81,21 @@ fetch(
         dg.textContent = `Upper limit is at: ${station.DG}cm`;
         sg.textContent = `Lower limit is at: ${station.SG}cm`;
 
-        station.MeasureParameters.forEach(measureObject => {
-          if(measureObject.Code.includes("Flow")){
-              const flow = document.createElement("p");
-              flow.textContent = `Flow is at: ${measureObject.CurrentValue}m3/s`;
-              infoDivName.append(flow);
+        station.MeasureParameters.forEach((measureObject) => {
+          if (measureObject.Code.includes("Flow")) {
+            const flow = document.createElement("p");
+            flow.textContent = `Flow is at: ${measureObject.CurrentValue}m3/s`;
+            infoDivName.append(flow);
           }
         });
 
+        if ("DG" && "SG" in station) {
+          infoDivName.append(dg);
+          infoDivName.append(sg);
+        }
+
         //Append info elements
         infoDivName.append(measurement);
-        infoDivName.append(dg);
-        infoDivName.append(sg);
         infoDivName.append(current);
 
         stationCircle.addEventListener("click", () => {
@@ -102,21 +105,21 @@ fetch(
         infoDivName.addEventListener("click", () => {
           infoDivName.classList.toggle("active");
         });
-                // Adds the "animate" class to the element which starts the animation.
+        // Adds the "animate" class to the element which starts the animation.
         activateAnimation();
         function activateAnimation() {
-            stationCircle.addEventListener("click", () => {
-                stationCircle.classList.add("animate");
-                removeAnimation();
-            });
-        };
+          stationCircle.addEventListener("click", () => {
+            stationCircle.classList.add("animate");
+            removeAnimation();
+          });
+        }
 
         // Removes the "animate" class from the element right after it's run (750ms).
         function removeAnimation() {
-            setTimeout(() => {
-                stationCircle.classList.remove("animate");
-            }, 750);
-        };
+          setTimeout(() => {
+            stationCircle.classList.remove("animate");
+          }, 750);
+        }
       });
     }
 
