@@ -1,5 +1,3 @@
-
-
 @media (min-width: 1000px) {
   #sectionOne {
     padding: 10vh 10vw 0vh 10vw;
@@ -96,13 +94,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    xheight: 100%;
-    xwidth: 100%;
   }
   .line-1,
   .line-2 {
-    xheight: 100%;
-    xwidth: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -111,15 +105,15 @@
 
   .line-1 {
     align-items: flex-end;
-    margin-left: 333px;
+    margin-left: 346px;
   }
 
   .line-2 {
     align-items: flex-start;
     margin-top: 0;
 
-    margin-left: 748px;
-    gap: 660px;
+    margin-left: 745px;
+    gap: 664px;
   }
 
   .wrapperDiv {
