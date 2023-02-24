@@ -35,10 +35,6 @@
   margin-top: 150px;
 }
 
-/* .wave {
-  width: 1px;
-  background-color: black;
-} */
 .wave {
   background-color: var(--turquoise);
   width: 55px;
