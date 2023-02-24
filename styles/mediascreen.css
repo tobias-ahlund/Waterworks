@@ -1,15 +1,4 @@
-/* desktop media */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", "sans-serif";
-  --ltblue: #d7f2fa;
-  --ltgreen: #9fe2bf;
-  --darkgreen: #2e8b57;
-  --turquoise: #20b2aa;
-  --black: #000000;
-}
+
 
 @media (min-width: 1000px) {
   #sectionOne {
@@ -173,8 +162,6 @@
     width: 130px;
   }
 
-
-
   .wave {
     background-color: var(--turquoise);
     width: 7200px;
@@ -198,47 +185,3 @@
     z-index: -1;
   }
 }
-
-/* .lakes-section {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-.container {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  height: 100%;
-  width: 100%;
-}
-
-.line-1,
-.line-2 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-}
-
-.line-2 {
-  margin-top: 150px;
-}
-
-.wave {
-  width: 1px;
-  background-color: black;
-}
-
-.wrapperDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  width: 100%;
-} */

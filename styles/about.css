@@ -1,78 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #D7F2FA;
-}
-
 .about-us-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-us-header {
-    font-family: "Inter", sans-serif;
-    font-size: 26px;
-    font-weight: bold;
-    padding: 20px 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 20px 50px;
 }
 
 .about-us-paragraph {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 0 50px;
-    max-width: 700px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0 50px;
+  max-width: 700px;
 }
 
 .about-us-button {
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 30px 50px;
-    border: none;
-    border-radius: 5px;
-    font-family: "Inter", sans-serif;
-    background-color: #2E8B57;
-    color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 30px 50px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  background-color: #2e8b57;
+  color: white;
 }
 .about-us-button:hover {
-    background-color: #2a734a;
+  background-color: #2a734a;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .dots {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: inline;
+  display: inline;
 }
 
 sub {
-    font-size: 80%;
-    line-height: 0;
+  font-size: 80%;
+  line-height: 0;
 }
 
 hr {
-    height: 1px;
-    background-color: black;
-    margin: 50px;
-    border: none;
+  height: 1px;
+  background-color: black;
+  margin: 50px;
+  border: none;
 }
 
 @media screen and (min-width: 700px) {
-    .about-us-header {
-        font-size: 65px;
-    }
+  .about-us-header {
+    font-size: 65px;
+  }
 
-    hr {
-        margin: 160px;
-    }
+  hr {
+    margin: 160px;
+  }
 }
